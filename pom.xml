@@ -4,11 +4,10 @@
 
   <groupId>com.example</groupId>
   <artifactId>excel_parser</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>excel_parser</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/qamate/excel-parser</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -37,4 +36,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <version>1.0.0</version>
 </project>

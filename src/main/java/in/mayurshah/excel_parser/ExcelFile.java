@@ -1,20 +1,24 @@
 /**
  * 
  */
-package com.example.excel_parser;
+package in.mayurshah.excel_parser;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
-import com.example.excel_parser.intf.ExcelFileIntf;
-import com.example.excel_parser.utils.CSVReader;
-import com.example.excel_parser.utils.ExcelFileTypes;
-import com.example.excel_parser.utils.XLSReader;
-import com.example.excel_parser.utils.XLSXReader;
+import in.mayurshah.excel_parser.intf.ExcelFileIntf;
+import in.mayurshah.excel_parser.utils.CSVReader;
+import in.mayurshah.excel_parser.utils.ExcelFileTypes;
+import in.mayurshah.excel_parser.utils.XLSReader;
+import in.mayurshah.excel_parser.utils.XLSXReader;
 
 /**
+ * This file extends java.io.File. Pass your file location and call getData(). It will return data in form of
+ * List<HashMap<String,String>>. First row is taken as key for each hashmap and following rows are values.
+ * 
+ * Size of List = # of rows - 1
  * @author mayurb
  *
  */

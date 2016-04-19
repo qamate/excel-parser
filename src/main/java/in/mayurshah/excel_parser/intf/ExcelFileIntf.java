@@ -1,4 +1,4 @@
-package com.example.excel_parser.intf;
+package in.mayurshah.excel_parser.intf;
 
 import java.io.IOException;
 import java.util.HashMap;
