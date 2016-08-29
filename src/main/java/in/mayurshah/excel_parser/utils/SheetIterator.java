@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -47,6 +48,25 @@ public class SheetIterator {
 			}
 			if(hRow != null)
 				data.add(hRow);
+		}
+		return data;
+	}
+	
+	public static HashMap<String, List<String>> getDataNew(Iterator<Row> itr){
+		HashMap<String, List<String>> data = new HashMap<String, List<String>>();
+		List<HashMap<String, String>> oldFormat = SheetIterator.getData(itr);
+		{
+			Set<String> keys = null;
+			List<String> colData = null;
+			if(oldFormat.size() > 0)
+				keys = oldFormat.get(0).keySet();
+			for(String key : keys){
+				for(HashMap<String, String> row : oldFormat){
+					colData = new ArrayList<String>();
+					colData.add(row.get(key));
+				}
+				data.put(key, colData);
+			}
 		}
 		return data;
 	}

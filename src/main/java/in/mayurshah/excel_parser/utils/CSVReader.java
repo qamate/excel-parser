@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.poi.ss.formula.eval.NotImplementedException;
+
 import in.mayurshah.excel_parser.ExcelFile;
 import in.mayurshah.excel_parser.intf.ExcelFileIntf;
 
@@ -38,6 +40,10 @@ public class CSVReader implements ExcelFileIntf {
 		//...
 		csvReader.close();
 		return data;
+	}
+
+	public HashMap<String, List<String>> getDataNew() throws IOException {
+		throw new NotImplementedException("Yet to be implemented!");
 	}
 
 }

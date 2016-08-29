@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface ExcelFileIntf {
 	List<HashMap<String, String>> getData() throws IOException;
+	HashMap<String, List<String>> getDataNew() throws IOException;
 
 }
