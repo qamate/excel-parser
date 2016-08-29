@@ -59,5 +59,24 @@ public class ExcelFile extends File {
 		return excelFileIntf.getData();
 	}
 	
+	public HashMap<String, List<String>> getDataNew() throws IOException{
+		String[] fileNameSplit = this.toString().split("\\.");
+		ExcelFileIntf excelFileIntf = null;
+		switch(ExcelFileTypes.valueOf(fileNameSplit[1].toUpperCase())){
+		case XLSX:
+			excelFileIntf = new XLSXReader(this);
+			break;
+		case XLS:
+			excelFileIntf = new XLSReader(this);
+			break;
+		case CSV:
+			excelFileIntf = new CSVReader(this);
+			break;
+		default:
+			break;
+		}
+		return excelFileIntf.getDataNew();
+	}
+	
 
 }

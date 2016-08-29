@@ -61,8 +61,8 @@ public class SheetIterator {
 			if(oldFormat.size() > 0)
 				keys = oldFormat.get(0).keySet();
 			for(String key : keys){
+				colData = new ArrayList<String>();
 				for(HashMap<String, String> row : oldFormat){
-					colData = new ArrayList<String>();
 					colData.add(row.get(key));
 				}
 				data.put(key, colData);
