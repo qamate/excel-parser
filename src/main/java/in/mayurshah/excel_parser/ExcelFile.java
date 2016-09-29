@@ -15,8 +15,7 @@ import in.mayurshah.excel_parser.utils.XLSReader;
 import in.mayurshah.excel_parser.utils.XLSXReader;
 
 /**
- * This file extends java.io.File. Pass your file location and call getData(). It will return data in form of
- * List<HashMap<String,String>>. First row is taken as key for each hashmap and following rows are values.
+ * This file extends java.io.File. Pass your file location and call getData(). First row is taken as key for each hashmap and following rows are values.
  * 
  * Size of List = # of rows - 1
  * @author mayurb
