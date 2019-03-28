@@ -12,5 +12,6 @@ To use this on your project add below dependency in pom.xml
     <groupId>in.mayurshah</groupId>
     <artifactId>excel_parser</artifactId>
     <version>1.0.0</version>
-</dependency>```
+</dependency>
+```
 FAQ @ http://softwaretestingboard.com/q2a
