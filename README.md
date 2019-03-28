@@ -6,4 +6,4 @@ The first row will be key and other rows will be Values into Hasmap. It will ret
 size() of List = No of rows in file -1.
 
 
-FAQ @ http://mayurshah.in
+FAQ @ http://softwaretestingboard.com/q2a
