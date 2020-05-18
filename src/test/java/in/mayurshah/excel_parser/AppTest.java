@@ -40,9 +40,21 @@ public class AppTest
      */
     public void testApp() throws IOException
     {
-        ExcelFile xlsxFile = new ExcelFile("test-resources\\file1.xlsx");
-        ExcelFile xlsFile = new ExcelFile("test-resources\\file1.xls");
-        ExcelFile csvFile = new ExcelFile("test-resources\\file1.csv");
+	ExcelFile xlsxFile, xlsFile ,csvFile;
+        String operSys = System.getProperty("os.name").toLowerCase();
+        if (operSys.contains("linux"))
+        {
+                xlsxFile = new ExcelFile("test-resources/file1.xlsx");
+                xlsFile = new ExcelFile("test-resources/file1.xls");
+                csvFile = new ExcelFile("test-resources/file1.csv");
+        }
+        else
+        {
+                xlsxFile = new ExcelFile("test-resources\\file1.xlsx");
+                xlsFile = new ExcelFile("test-resources\\file1.xls");
+                csvFile = new ExcelFile("test-resources\\file1.csv");
+
+        }
         System.out.println("XLSX file");
         PrintData(xlsxFile.getData());
         System.out.println("XLS file");
